@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <title>Party Time!</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans&display=swap" rel="stylesheet">
+  	<script>
+//Function to clear the default data form the Name value input, will not erase user input text
+		function clearName() {
+			if (document.getElementById('nameField').value == 'First and Last Name') {
+				document.getElementById('nameField').value = '';
+			}
+		}
+//Function to clear the default data from the Phone value input, will not erase user input text
+		function clearPhone() {
+			if (document.getElementById('phoneField').value == 'example: 212-123-1234') {
+				document.getElementById('phoneField').value = '';
+			}
+		}
+//Function to bring back default text if name field is empty
+		function resetName() {
+			if (document.getElementById('nameField').value == '') {
+				document.getElementById('nameField').value = 'First and Last Name';
+			}
+		}
+
+		function resetPhone() {
+			if (document.getElementById('phoneField').value == '') {
+				document.getElementById('phoneField').value = 'example: 212-123-1234';
+			}
+		}
+
+		function clearEmail() {
+			if (document.getElementById('emailField').value == 'someone@gmail.com') {
+				document.getElementById('emailField').value = '';
+			}
+		}
+
+		function resetEmail() {
+			if (document.getElementById('emailField').value == '') {
+				document.getElementById('emailField').value = 'someone@gmail.com';
+			}
+		}
+	</script>
+  </head>
+  <body>
+
+    <div class="hero-text">
+        <h1>Birthday Invite</h1>
+    </div>
+
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+
+    <center>
+        <div class="container">
+    		<form action="" method="post" name="signUpForm" id="signUpForm">
+    			<fieldset id="signUp">
+    				<legend>Sign Up For Birthday Party!</legend>
+
+    					<label for="nameField">Name:</label>
+    					<input id="nameField" name="nameField" type="text" class="textfield" value="First and Last Name" onFocus="clearName();" onBlur="resetName();">
+
+                        <br>
+
+    					<label for="phoneField">Phone:</label>
+    					<input id="phoneField" name="phoneField" type="text" class="textfield" value="example: 212-123-1234" onFocus="clearPhone();" onBlur="resetPhone();">
+
+                        <br>
+
+    					<label for="emailField">Email:</label>
+    					<input id="emailField" name="emailField" type="text" class="textfield" value="someone@gmail.com" onFocus="clearEmail();" onBlur="resetEmail();">
+
+    					<input id="submit" type="submit" name="submit" value="Sign Me Up!">
+    			</fieldset>
+    		</form>
+    	</div>
+    </center>
+
+  </body>
+
+
+
+<center>
+    <footer>
+	    <div class="contentWrapper">Copyright The Fronion - All Rights Reserved</div>
+	    <p><cite>Ballons!</cite> by Bennett Feely</p>
+    </footer>
+</center>
+
+</html>
